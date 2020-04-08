@@ -13,4 +13,5 @@ public class MiddleOfLinkedList {
      * 	}
      */
     // The same was solved in datastructure repo.
+    // https://github.com/Bishwa05/datastructure/blob/master/src/linklist/singly/search/SearchInList.java
 }
