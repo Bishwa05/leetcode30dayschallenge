@@ -23,12 +23,11 @@ package week2;
  * Explanation: S becomes "c" while T becomes "b".
  */
 public class BackspaceStringCompare {
-
-    public static boolean backspaceCompare(String S, String T) {
+    public static String getFormattedString(String str) {
         StringBuilder sb1 = new StringBuilder();
         int x =0;
-        for(int i =S.length()-1; i>=0; i--){
-            char c = S.charAt(i);
+        for(int i =str.length()-1; i>=0; i--){
+            char c = str.charAt(i);
             if(c=='#') {
                 x++;
                 continue;
@@ -42,23 +41,11 @@ public class BackspaceStringCompare {
 
         }
 
-        x =0;
-        StringBuilder sb2 = new StringBuilder();
-        for(int i =T.length()-1; i>=0; i--){
-            char c = T.charAt(i);
-            if(c=='#') {
-                x++;
-                continue;
-            }
-            if(x>0) {
-                x--;
+    return sb1.toString();
+    }
 
-            } else{
-                sb2.append(c);
-            }
-        }
-
-        return sb1.toString().equals(sb2.toString());
+    public static boolean backspaceCompare(String S, String T) {
+        return getFormattedString(S).equals(getFormattedString(T));
     }
 
     public static void main(String arg[]) {
