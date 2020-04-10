@@ -35,10 +35,11 @@ public class MinStack {
     }
 
     public void push(int x) {
-        if(stackList.size()==0){
-            min = x;
+        if(stackList.size()>0){
+            min = Math.min(((Node)stackList.get(index)).min, x);
+        } else{
+            min =x;
         }
-        if(min>x) min = x;
 
         Node n = new Node(x, min);
 
@@ -51,10 +52,6 @@ public class MinStack {
         if(index>=0) {
             stackList.remove(index);
             --index;
-            int nodeMin = ((Node)stackList.get(index)).min;
-            if(min<nodeMin){
-                min = nodeMin;
-            }
         }
 
     }
