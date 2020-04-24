@@ -87,6 +87,70 @@ public class LRUCache {
         }
     }
 
+    //More efficient pu
+    public void put2(int key, int value) {
+        Node node = m.get(key);
+        if(node == null) {
+            // add new node
+            node = new Node(key, value);
+            if(size == 0) {
+                // ran out of space
+                m.remove(head.key);
+                head = head.next;
+                size++;
+            }
+            if(head == null) {
+                head = node;
+            } else {
+                tail.next = node;
+                node.prev = tail;
+            }
+            tail = node;
+            m.put(key, node);
+            size--;
+        } else {
+            // update the existing node with the value
+            node.value = value;
+            if(node != tail) {
+                if(node == head) {
+                    head = head.next;
+                } else {
+                    node.prev.next = node.next;
+                    node.next.prev = node.prev;
+                }
+
+                tail.next = node;
+                node.prev = tail;
+                node.next = null;
+                tail = node;
+            }
+        }
+    }
+
+    //More efficient get
+    public int get2(int key) {
+        Node node = m.get(key);
+        if(node == null) return -1;
+
+        // node exists in the cache
+        if(node != tail) {
+            if(node == head) {
+                head = head.next;
+            } else {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+            }
+
+            // move the curr node to the end/tail
+            tail.next = node;
+            node.prev = tail;
+            node.next = null;
+            tail = node;
+        }
+
+        return node.value;
+    }
+
     public static void main(String arg[]) {
         LRUCache cache = new LRUCache( 2 /* capacity */ );
 
