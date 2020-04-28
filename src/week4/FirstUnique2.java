@@ -17,8 +17,6 @@ public class FirstUnique2 {
             int element = nums[i];
             add(element);
         }
-
-
     }
 
     public int showFirstUnique() {
