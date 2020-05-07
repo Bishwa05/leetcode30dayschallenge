@@ -1,6 +1,6 @@
 package april.week1;
 
-public class BestTimeToBuySellStock {
+public class BestTimeToBuySellStockII {
 
     // The 2nd best solution.
     public static int maxProfit(int prices[]) {
