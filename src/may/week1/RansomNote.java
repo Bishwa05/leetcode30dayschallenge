@@ -1,4 +1,4 @@
-package may;
+package may.week1;
 
 public class RansomNote {
     public boolean canConstruct(String ransomNote, String magazine) {

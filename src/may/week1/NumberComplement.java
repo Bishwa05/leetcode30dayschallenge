@@ -1,4 +1,4 @@
-package may;
+package may.week1;
 
 public class NumberComplement {
     public int findComplement(int num) {

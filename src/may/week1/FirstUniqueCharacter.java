@@ -1,4 +1,4 @@
-package may;
+package may.week1;
 
 public class FirstUniqueCharacter {
     public int firstUniqChar(String s) {

@@ -1,14 +1,7 @@
-package may;
+package may.week1;
 
 
-class TreeNode{
-             int val;
-             TreeNode left;
-             TreeNode right;
-             TreeNode() {}
-             TreeNode(int val) { this.val = val; }
-        }
-
+import may.TreeNode;
 
 public class CousinsInBinaryTree {
     public boolean ifCousin(TreeNode root, int x, int y){
