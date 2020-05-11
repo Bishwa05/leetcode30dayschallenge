@@ -31,8 +31,6 @@ public class FindTheTownJudge {
 
     public int findJudge(int N, int[][] trust) {
 
-
-
         Map<Integer, List<Integer>> judgeKeyMap= new HashMap<>();
         Set<Integer> followers = new HashSet<>();
 
