@@ -33,8 +33,8 @@ public class KthSmallestElementInaBST {
             if(current.left==null)
             {
                 count++;
-                if(count==k)
-                {ksmall=current.val;
+                if(count==k) {
+                    ksmall=current.val;
                     break;
                 }
                 current=current.right;
