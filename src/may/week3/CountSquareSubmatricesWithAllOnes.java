@@ -1,5 +1,9 @@
 package may.week3;
 
+/**
+ * This similar to find subsquare matrix with all 1's
+ * Addition is add the count to result with each iteration.
+ */
 public class CountSquareSubmatricesWithAllOnes {
 
     public int countSquares(int[][] matrix) {
