@@ -14,7 +14,12 @@ public class IntervalListIntersections {
             int hi = Math.min(A[i][1], B[j][1]);
             if (lo <= hi)
                 result.add(new int[]{lo, hi});
-            // result.add(new Interval(lo, hi));
+
+            /**
+             * This is actually a 2 pointer concept.
+             * if high of array A finishes first we need to increase i pointer
+             * if high of Array B finishes first we need to increase j pointer.
+             */
             if (A[i][1] < B[j][1])
                 i++;
             else
