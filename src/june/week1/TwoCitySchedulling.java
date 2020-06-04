@@ -1,5 +1,8 @@
 package june.week1;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class TwoCitySchedulling {
     public int twoCitySchedCost(int[][] costs) {
         int N = costs.length / 2;
@@ -16,5 +19,22 @@ public class TwoCitySchedulling {
             }
         }
         return dp[N][N];
+    }
+
+    public int twoCitySchedCostGreedy(int[][] costs) {
+        Arrays.sort(costs, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] a, int[] b) {
+                return a[0] - a[1] - (b[0] - b[1]);
+            }
+        });
+        int res = 0;
+        for (int i = 0; i < costs.length / 2; i++) {
+            res += costs[i][0];
+        }
+        for (int i = costs.length / 2; i < costs.length;i++) {
+            res += costs[i][1];
+        }
+        return res;
     }
 }
