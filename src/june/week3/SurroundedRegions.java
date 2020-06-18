@@ -8,25 +8,25 @@ public class SurroundedRegions {
         int m = board.length;
         int n = board[0].length;
 
-        //merge O's on left & right boarder
+        //boundaryDFS O's on left & right boarder
         for(int i=0;i<m;i++){
             if(board[i][0] == 'O'){
-                merge(board, i, 0);
+                boundaryDFS(board, i, 0);
             }
 
             if(board[i][n-1] == 'O'){
-                merge(board, i, n-1);
+                boundaryDFS(board, i, n-1);
             }
         }
 
-        //merge O's on top & bottom boarder
+        //boundaryDFS O's on top & bottom boarder
         for(int j=0; j<n; j++){
             if(board[0][j] == 'O'){
-                merge(board, 0, j);
+                boundaryDFS(board, 0, j);
             }
 
             if(board[m-1][j] == 'O'){
-                merge(board, m-1, j);
+                boundaryDFS(board, m-1, j);
             }
         }
 
@@ -42,7 +42,7 @@ public class SurroundedRegions {
         }
     }
 
-    public void merge(char[][] board, int i, int j){
+    public void boundaryDFS(char[][] board, int i, int j){
         board[i][j] = '#';
 
         int[] dx = {-1, 0, 1, 0};
@@ -55,7 +55,7 @@ public class SurroundedRegions {
             if(x>=0 && x<board.length
                     && y>=0 && y<board[0].length
                     && board[x][y]=='O'){
-                merge(board, x, y);
+                boundaryDFS(board, x, y);
             }
         }
     }
