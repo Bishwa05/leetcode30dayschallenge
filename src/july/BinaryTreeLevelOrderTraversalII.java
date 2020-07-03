@@ -12,11 +12,11 @@ public class BinaryTreeLevelOrderTraversalII {
             return result;
         }
 
-        LinkedList<TreeNode> current = new LinkedList<TreeNode>();
-        LinkedList<TreeNode> next = new LinkedList<TreeNode>();
+        LinkedList<TreeNode> current = new LinkedList<>();
+        LinkedList<TreeNode> next = new LinkedList<>();
         current.offer(root);
 
-        List<Integer> numberList = new ArrayList<Integer>();
+        List<Integer> numberList = new ArrayList<>();
 
         // need to track when each level starts
         while(!current.isEmpty()){
