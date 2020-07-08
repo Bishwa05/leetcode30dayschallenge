@@ -1,4 +1,4 @@
-package july;
+package july.week1;
 
 public class HammingDistance {
     public int hammingDistance(int x, int y) {
