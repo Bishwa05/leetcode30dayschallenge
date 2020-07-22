@@ -54,6 +54,6 @@ public class WordSearch
                 {'A','D','E','E'}
             };
 
-        System.out.println(w.exist(board, "SEE"));
+        System.out.println(w.exist(board, "ABCB"));
     }
 }
