@@ -21,7 +21,9 @@ public class WordSearch
             return false;
         }
 
+
         char temp = board[i][j];
+        // To restrict the backward visit to compute the same char again.
         board[i][j] =' ';
             boolean found = dfs(board, word, i + 1, j,pos + 1)
                 || dfs(board, word, i - 1, j,pos + 1)
