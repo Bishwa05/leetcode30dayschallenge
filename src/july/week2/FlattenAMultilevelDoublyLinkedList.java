@@ -29,7 +29,7 @@ public class FlattenAMultilevelDoublyLinkedList
                 head.next = head.child;
                 head.next.prev = head;
                 head.child = null;
-            } else if(head.next != null && !s.isEmpty()) {
+            } else if(head.next == null && !s.isEmpty()) {
                 head.next = s.pop();
                 head.next.prev = head;
 
