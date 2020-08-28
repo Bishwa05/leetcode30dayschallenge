@@ -1,4 +1,4 @@
-package august;
+package august.week1;
 
 class MyHashSet {
 
