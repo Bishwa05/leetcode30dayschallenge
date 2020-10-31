@@ -1,4 +1,4 @@
-package oct;
+package oct.week1;
 
 import may.ListNode;
 
