@@ -53,4 +53,13 @@ public class MinimumHeightTrees
         }
         return leaves;
     }
+
+
+    public static void main(String args[]){
+        int n = 4;
+
+        int [][]edges = {{1,0},{1,2},{1,3}};
+        MinimumHeightTrees m = new MinimumHeightTrees();
+        m.findMinHeightTrees(n, edges).forEach(e -> System.out.println(e));
+    }
 }
