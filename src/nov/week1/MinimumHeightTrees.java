@@ -1,4 +1,4 @@
-package nov;
+package nov.week1;
 
 import java.util.ArrayList;
 import java.util.HashSet;

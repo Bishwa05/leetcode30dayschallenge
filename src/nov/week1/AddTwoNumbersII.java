@@ -1,4 +1,4 @@
-package nov;
+package nov.week1;
 
 import may.ListNode;
 
@@ -19,6 +19,7 @@ public class AddTwoNumbersII
             len1++;
             list1 = list1.next;
         }
+
 
         ListNode list2 = l2;
         while(list2 != null){

@@ -1,4 +1,4 @@
-package nov;
+package nov.week1;
 
 public class SplitCheck
 {
