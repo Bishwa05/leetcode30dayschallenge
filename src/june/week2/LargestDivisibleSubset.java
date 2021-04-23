@@ -9,12 +9,12 @@ public class LargestDivisibleSubset {
     // Dfs
     public List<Integer> largestDivisibleSubset(int[] nums) {
         if(nums==null || nums.length==0)
-            return new ArrayList<Integer>();
+            return new ArrayList<>();
 
         Arrays.sort(nums);
 
         int[] max = new int[1];
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         helper(nums, 0, result, max);
         return answer;
     }
@@ -22,7 +22,7 @@ public class LargestDivisibleSubset {
     public void helper(int[] nums, int start, List<Integer> result, int[] max){
         if(result.size()>max[0]){
             max[0]=result.size();
-            answer=new ArrayList<Integer>(result);
+            answer=new ArrayList<>(result);
         }
 
         if(start==nums.length)
@@ -82,5 +82,13 @@ public class LargestDivisibleSubset {
         }
 
         return result;
+    }
+
+    public static void main(String arg[]){
+        LargestDivisibleSubset l = new LargestDivisibleSubset();
+        int[] nums = {2, 3, 6, 8};
+        for (Integer i : l.largestDivisibleSubset(nums)) {
+            System.out.println(i);
+        }
     }
 }

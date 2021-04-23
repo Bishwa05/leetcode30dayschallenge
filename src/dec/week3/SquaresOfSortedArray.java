@@ -2,6 +2,7 @@ package dec.week3;
 
 import java.util.Arrays;
 
+// Time complexity : O(nlogn)
 public class SquaresOfSortedArray
 {
     public int[] sortedSquares(int[] nums) {
