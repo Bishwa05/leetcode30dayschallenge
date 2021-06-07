@@ -5,6 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ *
+ * https://leetcode.com/problems/maximum-performance-of-a-team/solution/
+ * Nice explaination
+ */
 class Engineer implements Comparable{
     int speed;
     int efficiency;
@@ -64,7 +69,7 @@ public class MaximumPerformanceOfATeam
         int n = 6;
         int[] speed = {2,10,3,1,5,8};
         int[] efficiency = {5,4,3,9,7,2};
-        int k = 2;
+        int k = 3;
         System.out.println(m.maxPerformance(n, speed, efficiency, k));
     }
 }
