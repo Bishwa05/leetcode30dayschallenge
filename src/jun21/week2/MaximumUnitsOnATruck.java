@@ -15,7 +15,7 @@ public class MaximumUnitsOnATruck
 
         int res = 0;
 
-        while(truckSize>0 && pq.size()>0){
+        while(truckSize>0 && pq.size()>0    ){
             int[] element = pq.poll();
 
             int k = element[0];
