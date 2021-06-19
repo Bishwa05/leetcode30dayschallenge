@@ -30,7 +30,7 @@ public class NumArray
         }
     }
 
-    private void update(int pos, int val){
+    public void update(int pos, int val){
         pos+=n;
         tree[pos] = val;
         while(pos>0){
@@ -67,4 +67,15 @@ public class NumArray
        }
         return sum;
     }
+
+    public static void main (String[] args)
+    {
+        int[] nums = {1, 3, 5};
+        NumArray n = new NumArray(nums);
+        n.sumRange(0,2);
+        n.update(1, 2);
+        n.sumRange(0, 2);
+
+    }
+
 }
