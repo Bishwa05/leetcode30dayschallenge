@@ -1,5 +1,7 @@
 package jun21.week4;
 
+import java.util.Stack;
+
 public class RemoveAllAdjacentDuplicatesInString
 {
     public String removeDuplicates(String s) {
