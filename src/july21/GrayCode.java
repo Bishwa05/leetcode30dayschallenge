@@ -23,12 +23,12 @@ public class GrayCode
         int current = result.get(result.size()-1);
 
         for(int i =0; i<n; i++){
-            int next = current ^ (i<<i);
-            if(isPresent.contains(next)){
+            int next = current ^ (1<<i);
+            if(!isPresent.contains(next)){
                 isPresent.add(next);
                 result.add(next);
                 // if valid sequence found no need to search further
-                if(grayCodeHelper(result, n, isPresent)) return true;
+                if(grayCodeHelper(result,n , isPresent)) return true;
                 // if no valid sequence found delete the last added number and continue search;
                 isPresent.remove(next);
                 result.remove(result.size()-1);
