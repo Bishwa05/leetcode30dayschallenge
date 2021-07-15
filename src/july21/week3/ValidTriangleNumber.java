@@ -34,8 +34,8 @@ public class ValidTriangleNumber
             } else {
                 l = mid +1;
             }
-
         }
+        return l;
     }
     public int triangleNumber(int[] nums) {
         int count =0;
