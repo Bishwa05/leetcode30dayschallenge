@@ -1,5 +1,6 @@
 package sept21;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -43,7 +44,17 @@ public class ErectTheFence
             }
 
             // Handle multi points in a line
-        }
+            for(int i =0; i<points.length; i++){
+                Point p = points[i];
+                int cross = crossProductLength(p, cur, next);
+                if(i != curIndex && cross ==0){
+                    answer.add(p);
+                }
+            }
+            cur= next;
+            curIndex = nextIndex;
+        } while(curIndex != firstIndex);
+        return new ArrayList<>(answer);
     }
 
     private int crossProductLength(Point A, Point B, Point C){
