@@ -14,7 +14,7 @@ public class BasicCalculator
             if(Character.isDigit(c)){
                 int val = 0;
                 while(i< s.length() && Character.isDigit(s.charAt(i))){
-                    val = val%10 + s.charAt(i)-'0';
+                    val = val*10 + s.charAt(i)-'0';
                     i++;
                 }
                 i--;
