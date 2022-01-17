@@ -13,12 +13,12 @@ public class ValidSudoku
         int M = 9;
         int N = 9;
 
-        for(int i =0; i< M; i++){
+        for (int i = 0; i < M; i++) {
             char[] row = board[i];
             duplicateSet = new HashSet<>();
-            for(char c : row){
-                if('.'!= c){
-                    if(!duplicateSet.add(c)){
+            for (char c : row) {
+                if ('.' != c) {
+                    if (!duplicateSet.add(c)) {
                         return false;
                     }
                 }
@@ -26,12 +26,12 @@ public class ValidSudoku
         }
 
 
-        for(int i =0; i< N; i++){
+        for (int i = 0; i < N; i++) {
             duplicateSet = new HashSet<>();
-            for(int j =0; j< M; j++){
+            for (int j = 0; j < M; j++) {
                 char c = board[j][i];
-                if('.'!= c){
-                    if(!duplicateSet.add(c)){
+                if ('.' != c) {
+                    if (!duplicateSet.add(c)) {
                         return false;
                     }
                 }
@@ -39,16 +39,16 @@ public class ValidSudoku
         }
 
         // for each block
-        for(int m = 0; m<3; m++){
-            for(int n =0; n<3; n++){
+        for (int m = 0; m < 3; m++) {
+            for (int n = 0; n < 3; n++) {
 
 
                 duplicateSet = new HashSet<>();
-                for(int i =m*3 + 0; i<(m*3)+3; i++){
-                    for(int j =n *3 + 0; j<(n*3)+3; j++){
+                for (int i = m * 3 + 0; i < (m * 3) + 3; i++) {
+                    for (int j = n * 3 + 0; j < (n * 3) + 3; j++) {
                         char c = board[j][i];
-                        if('.'!= c){
-                            if(!duplicateSet.add(c)){
+                        if ('.' != c) {
+                            if (!duplicateSet.add(c)) {
                                 return false;
                             }
                         }
@@ -59,4 +59,5 @@ public class ValidSudoku
 
 
         return true;
+    }
 }

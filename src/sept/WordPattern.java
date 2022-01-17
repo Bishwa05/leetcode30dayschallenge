@@ -29,6 +29,35 @@ public class WordPattern
             }
         }
         return true;
+    }
 
+
+    public boolean wordPattern2(String pattern, String s) {
+
+        String[] strArr = s.split(" ");
+        Map<Character, String> charMap = new HashMap<>();
+        Map<String, Character> wordMap = new HashMap<>();
+
+        if(pattern.length() != strArr.length) return false;
+
+        for(int i = 0; i<strArr.length; i++){
+            char c = pattern.charAt(i);
+            String word = strArr[i];
+            if(charMap.containsKey(c)) {
+                if(!charMap.get(c).equals(word)) return false;
+            } else if(wordMap.containsKey(word)){
+                if(!wordMap.get(word).equals(c)) return false;
+            } else {
+                charMap.put(c, word);
+                wordMap.put(word, c);
+            }
+        }
+        return true;
+
+    }
+
+    public static void main(String[] args) {
+        WordPattern w = new WordPattern();
+        System.out.println(w.wordPattern2("abba", "cat dog dog cat"));
     }
 }
